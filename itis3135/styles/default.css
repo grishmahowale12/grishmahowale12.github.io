@@ -1,0 +1,19 @@
+body{
+    background-color: pink;
+    color:purple;
+    font-family: cursive;
+}
+header, main, footer {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+body figure{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+body figure img{
+    height: 350px;
+}
