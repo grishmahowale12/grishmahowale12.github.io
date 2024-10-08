@@ -1,19 +1,39 @@
-body{
+body {
     background-color: pink;
-    color:purple;
+    color: purple;
     font-family: cursive;
 }
+
+/* Style for links */
+a {
+    color: darkviolet; 
+    text-decoration: none; 
+}
+
+/* Hover state for links */
+a:hover {
+    color: mediumvioletred; 
+    text-decoration: underline; 
+}
+
+/* Visited links */
+a:visited {
+    color: purple; 
+}
+
 header, main, footer {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
 }
-body figure{
+
+body figure {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
-body figure img{
+
+body figure img {
     height: 350px;
 }
