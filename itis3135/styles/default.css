@@ -39,6 +39,18 @@ body figure img {
     height: 350px;
 }
 
+header {
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
 h2 {
     text-align: center;
 }
