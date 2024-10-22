@@ -91,3 +91,43 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: rgba(239, 173, 233, 0.8); 
 }
+
+
+/* Styling for form */
+input[type="text"], input[type="tel"], input[type="email"], select {
+    font-size: 16px; 
+    border-radius: 8px; 
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+input[type="submit"], input[type="reset"] {
+    background-color: #660066; 
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #8b008b;
+}
+
+/* Form container styling */
+.divider {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+
