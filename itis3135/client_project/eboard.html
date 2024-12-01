@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project - Index</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Slideshow Styles */
+
+.slideshow-container {
+    max-width: 500px; 
+    margin: 20px auto;
+    position: relative;
+    border: 5px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0; 
+    height: auto; 
+}
+
+.slides {
+    display: none;
+}
+
+.active-slide {
+    display: block;
+}
+
+.slides img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ddd;
+    display: block; 
+}
+
+.caption {
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot-active {
+    background-color: #717171; 
+}
+
+
+
+
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="responsive-heading">South Asian Student Association</h1>
+        <nav>
+            <a href="index.html" id="home-link">Home</a> |
+            <a href="eboard.html" id="eboard">E-Board</a> |
+            <a href="events.html" id="events-link">Events</a> |
+            <a href="culture.html" id="culture-link">Culture and Heritage</a> |
+            <a href="membership.html" id="membership-link">Membership</a> |
+            <a href="contact.html" id="contact-link">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="slides active-slide">
+                <img src="images/president.jpeg" alt="President">
+                <div class="caption">President</div>
+            </div>
+            <div class="slides">
+                <img src="images/vicepresident.jpeg" alt="Vice President">
+                <div class="caption">Vice President</div>
+            </div>
+            <div class="slides">
+                <img src="images/marketing1.jpeg" alt="Marketing 1">
+                <div class="caption">Marketing</div>
+            </div>
+            <div class="slides">
+                <img src="images/marketing2.jpeg" alt="Marketing 2">
+                <div class="caption">Marketing</div>
+            </div>
+            <div class="slides">
+                <img src="images/marketing3.jpeg" alt="Marketing 3">
+                <div class="caption">Marketing</div>
+            </div>
+            <div class="slides">
+                <img src="images/marketing4.jpeg" alt="Marketing 4">
+                <div class="caption">Marketing</div>
+            </div>
+            <div class="slides">
+                <img src="images/mediachair.jpeg" alt="Media Chair">
+                <div class="caption">Media Chair</div>
+            </div>
+            <div class="slides">
+                <img src="images/photography.jpeg" alt="Photography">
+                <div class="caption">Photography</div>
+            </div>
+            <div class="slides">
+                <img src="images/events1.jpeg" alt="Events 1">
+                <div class="caption">Events</div>
+            </div>
+            <div class="slides">
+                <img src="images/events2.jpeg" alt="Events 2">
+                <div class="caption">Events</div>
+            </div>
+            <div class="slides">
+                <img src="images/culture1.jpeg" alt="Culture 1">
+                <div class="caption">Culture</div>
+            </div>
+            <div class="slides">
+                <img src="images/culture2.jpeg" alt="Culture 2">
+                <div class="caption">Culture</div>
+            </div>
+            <div class="slides">
+                <img src="images/culinary.jpeg" alt="Culinary">
+                <div class="caption">Culinary</div>
+            </div>
+            <div class="slides">
+                <img src="images/treasurer1.jpeg" alt="Treasurer 1">
+                <div class="caption">Treasurer</div>
+            </div>
+            <div class="slides">
+                <img src="images/treasurer2.jpeg" alt="Treasurer 2">
+                <div class="caption">Treasurer</div>
+            </div>
+            <!-- Navigation Buttons -->
+<button id="prev-btn" class="prev nav-button">❮</button>
+<button id="next-btn" class="next nav-button">❯</button>
+
+        </div>
+        <!-- Dots -->
+        <div class="dots">
+            <span class="dot active" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </main>
+    
+    <footer>
+        <p>
+            Pages built by 
+            <a href="ghboutique.com.html">Gh Boutique</a> &copy; 2024
+            <img src="images/button_validation_wcag (1).png" alt="WCAG Validation Image">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="validation button image">
+            <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="validation button image">
+        </p>
+    </footer>
+    
+    <script>
+       // JavaScript for slideshow functionality
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slides");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active-slide", i === index);
+    });
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("dot-active", i === index);  // Changed to use .dot-active
+    });
+}
+
+function plusSlides(direction) {
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    showSlide(currentIndex);
+}
+
+function currentSlide(index) {
+    currentIndex = index - 1;
+    showSlide(currentIndex);
+}
+
+// Attach event listeners to navigation buttons and dots
+document.getElementById("prev-btn").addEventListener("click", () => plusSlides(-1));
+document.getElementById("next-btn").addEventListener("click", () => plusSlides(1));
+
+dots.forEach((dot) => {  // Added parentheses around the arrow function argument
+    dot.addEventListener("click", (e) => {
+        const slideIndex = parseInt(e.target.getAttribute("data-slide")) - 1;
+        currentSlide(slideIndex);
+    });
+});
+
+
+
+
+
+        // Auto-play functionality
+        setInterval(() => plusSlides(1), 5000); // Auto-slide every 5 seconds
+    </script>
+</body>
+</html>

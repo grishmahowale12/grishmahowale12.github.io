@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client Project - Index</title>
+        <link rel="stylesheet" href="styles/default.css">
+        <style>
+            main {
+                background-color: #fff8e1; /* Match site background */
+                color: #333333; /* Match site text color */
+                margin: 20px auto;
+                padding: 20px;
+                max-width: 800px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+    
+            label {
+                font-weight: bold;
+            }
+    
+            input, textarea, button {
+                font-size: 1rem;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            button {
+                background-color: #007BFF; /* Match button style */
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+    
+            button:hover {
+                background-color: #0056b3;
+            }
+    
+            .contact-links {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+    
+            .contact-links a {
+                text-decoration: none;
+                color: #007BFF;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+    
+            .contact-links a:hover {
+                color: #0056b3;
+            }
+        </style>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+        
+        <header>
+            <h1 class="responsive-heading">South Asian Student Association</h1>
+        <nav>
+                <a href="index.html" id="home-link">Home</a> |
+                <a href="eboard.html" id="eboard">E-Board</a> |
+                <a href="events.html" id="events-link">Events</a> |
+                <a href="culture.html" id="culture-link">Culture and Heritage</a> |
+                <a href="membership.html" id="membership-link">Membership</a> |
+                <a href="contact.html" id="contact-link">Contact</a> 
+        </nav>
+            
+
+        </header>
+        
+        <main>
+            <h2>Stay Connected with SASA</h2>
+        <p>You can reach us through the following platforms or by filling out the contact form below:</p>
+        
+        <div class="contact-links">
+            <a href="https://www.instagram.com/sasa_clt/" target="_blank">Follow us on Instagram</a>
+            <a href="https://ninerengage.uncc.edu/organization/sasa" target="_blank">Visit us on Niner Engage</a>
+            <a href="mailto:sasa_clt@uncc.edu">Email Us: rjadia@uncc.edu</a>
+        </div>
+
+        <h3>Contact Form</h3>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email *</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+            
+            
+            
+        </main>
+        
+        
+        <footer>
+            <p>
+                Pages built by 
+                <a href = "ghboutique.com.html">Gh Boutique</a> &copy; 2024
+                <img src="images/button_validation_wcag (1).png" alt="WCAG Validation Image">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="validation button image">
+                <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="validation button image">
+            </p>
+
+        </footer>
+        <script src="scripts/HTMLInclude.min.js"></script> 
+    </body>
+</html>
+
+
+
+
+
+
+
