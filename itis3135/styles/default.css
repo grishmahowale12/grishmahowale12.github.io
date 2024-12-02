@@ -1,33 +1,33 @@
+/* General Body Styles */
 body {
     background-color: pink;
     color: purple;
     font-family: cursive;
-    
 }
 
-/* Style for links */
+/* Style for Links */
 a {
-    color: darkviolet; 
-    text-decoration: none; 
+    color: darkviolet;
+    text-decoration: none;
 }
 
-/* Hover state for links */
 a:hover {
-    color: mediumvioletred; 
-    text-decoration: underline; 
+    color: mediumvioletred;
+    text-decoration: underline;
 }
 
-/* Visited links */
 a:visited {
-    color: purple; 
+    color: purple;
 }
 
+/* Layout for Header, Main, Footer */
 header, main, footer {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 90%; /* Flexible width */
+    max-width: 1200px; /* Ensures readability on large screens */
+    margin: 0 auto; /* Centers content horizontally */
 }
 
+/* Figure Styling */
 body figure {
     width: 90%;
     max-width: 900px;
@@ -39,64 +39,45 @@ body figure img {
     height: 350px;
 }
 
-header {
+/* Alignment Styling */
+header, header p, footer, h2, h3 {
     text-align: center;
 }
 
-header p {
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-
-
+/* Table Styling */
 table {
-    border-style: solid; 
-    border-collapse: collapse; 
-    width: 100%; 
-    table-layout: fixed; 
-    text-align: center; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-style: solid;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 th, td {
-    padding: 15px 20px; 
-    text-align: center; 
-    font-size: 1em; 
-    border-bottom: 1px solid #686963; 
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1em;
+    border-bottom: 1px solid #686963;
 }
 
-/* Top row darker color */
 th {
-    background-color: rgb(102, 0, 102); 
-    color: white; 
+    background-color: rgb(102, 0, 102);
+    color: white;
 }
 
-/* Alternating row colors */
 tr:nth-child(even) {
-    background-color: rgba(155, 89, 182, 0.6); 
+    background-color: rgba(155, 89, 182, 0.6);
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(239, 173, 233, 0.8); 
+    background-color: rgba(239, 173, 233, 0.8);
 }
 
-
-/* Styling for form */
+/* Form Styling */
 input[type="text"], input[type="tel"], input[type="email"], select {
-    font-size: 16px; 
-    border-radius: 8px; 
+    font-size: 16px;
+    border-radius: 8px;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -105,10 +86,9 @@ input[type="checkbox"], input[type="radio"] {
     margin-right: 5px;
 }
 
-/* Button styling */
 input[type="submit"], input[type="reset"] {
-    background-color: #660066; 
-    color: #ffffff; 
+    background-color: #660066;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -120,7 +100,6 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #8b008b;
 }
 
-/* Form container styling */
 .divider {
     background-color: #f9f9f9;
     padding: 20px;
@@ -129,6 +108,45 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     margin-top: 20px;
 }
 
+/* Media Queries */
 
+/* Large Screens (Desktops) */
+@media screen and (min-width: 981px) {
+    main {
+        width: 80%;
+    }
+    body figure img {
+        height: 400px;
+    }
+}
 
+/* Medium Screens (Tablets) */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 95%;
+    }
+    body figure img {
+        height: 300px;
+    }
+    table th, table td {
+        font-size: 0.9em;
+    }
+}
 
+/* Small Screens (Mobiles) */
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    body figure img {
+        height: 250px;
+    }
+    table th, table td {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    input[type="submit"], input[type="reset"] {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
