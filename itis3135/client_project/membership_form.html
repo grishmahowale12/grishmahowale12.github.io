@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASA Membership Form</title>
     <link rel="stylesheet" href="styles/default.css">
+    <!-- Internal CSS for custom styling specific to this page -->
 <style>
+    
     main {
+        
             background-color: #fff8e1; /* Match your site’s background color */
             color: #333333; /* Match your site's text color */
             margin: 20px auto;
@@ -63,17 +66,9 @@
 
 <body>
     <header>
-        <h1 class="responsive-heading">SASA Membership Form - 2024-2025</h1>
-        <nav>
-            <a href="index.html" id="home-link">Home</a> |
-            <a href="eboard.html" id="eboard">E-Board</a> |
-            <a href="events.html" id="events-link">Events</a> |
-            <a href="culture.html" id="culture-link">Culture and Heritage</a> |
-            <a href="membership.html" id="membership-link">Membership</a> |
-            <a href="contact.html" id="contact-link">Contact</a> 
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
-
+ <!-- Main content section containing the membership form -->
     <main>
         <form action="submit_form.php" method="post">
             <fieldset>
@@ -87,7 +82,7 @@
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone">
             </fieldset>
-
+<!-- Fieldset for academic information section -->
             <fieldset>
                 <legend>Academic Information</legend>
                 <label for="year">What year are you (not associated with credit hours)? *</label>
@@ -101,7 +96,7 @@
                     <option value="Other">Other</option>
                 </select>
             </fieldset>
-
+<!-- Fieldset for South Asian identity section -->
             <fieldset>
                 <legend>South Asian Identity</legend>
                 <label>Which South Asian countries (if any) do you identify with? *</label>
@@ -136,7 +131,7 @@
                     <input type="checkbox" id="other" name="countries" value="Other">
                     <label for="other">Other</label>
                 </div>
-
+<!-- Checkboxes for religions the user feels connected to -->
                 <label>Which South Asian religions, if any, do you feel connected to as a result of your diaspora? *</label>
                 <div>
                     <input type="checkbox" id="buddhism" name="religions" value="Buddhism">
@@ -171,6 +166,7 @@
                 </div>
             </fieldset>
 
+            <!-- Fieldset for membership details section -->
             <fieldset>
                 <legend>Membership Details</legend>
                 <label>How long have you been in SASA? *</label>
@@ -222,13 +218,7 @@
     </main>
 
     <footer>
-        <p>
-            Pages built by 
-            <a href = "ghboutique.com.html">Gh Boutique</a> &copy; 2024
-            <img src="images/button_validation_wcag (1).png" alt="WCAG Validation Image">
-            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="validation button image">
-            <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="validation button image">
-        </p>
+        <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script> 
 </body>

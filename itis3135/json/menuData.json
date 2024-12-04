@@ -1,0 +1,30 @@
+{
+    "mainMenu": [
+      { "name": "Home", "url": "index.html" },
+      { "name": "Introduction", "url": "introduction.html" },
+      { "name": "Contract", "url": "contract.html" },
+      { "name": "About", "url": "about.html" },
+      { "name": "Website Evaluations", "url": "website_evaluations.html" },
+      { "name": "Tables", "url": "tables.html" },
+      { "name": "Forms", "url": "forms.html" },
+      { "name": "Project Overview", "url": "project_overview.html" },
+      { "name": "Peer Review 1", "url": "peerreview1.html" },
+      { "name": "Peer Review 2", "url": "peerreview2.html" },
+      { "name": "First Scripts", "url": "firstscripts.html" },
+      { "name": "BYO", "url": "byo_intro.html" },
+      { "name": "Slideshow", "url": "slideshow.html" },
+      { "name": "Drawing", "url": "drawing.html" },
+      { "name": "CRAPPY", "url": "stuff/c+@@pp^yy.htm" },
+      { "name": "Hobby", "url": "hobby/index.html" },
+      { "name": "Client Project", "url": "client_project/index.html" }
+    ],
+    "footerMenu": [
+      { "name": "Webpage", "url": "https://webpages.charlotte.edu/ghowale/" },
+      { "name": "Freecodecamp", "url": "https://www.freecodecamp.org/grishmahowale" },
+      { "name": "Codeacademy", "url": "https://www.codecademy.com/profiles/grishmahowale" },
+      { "name": "Github", "url": "https://github.com/grishmahowale12/" },
+      { "name": "Github.io", "url": "https://grishmahowale12.github.io/" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/grishma-howale-75a2b1274/" }
+    ]
+  }
+  

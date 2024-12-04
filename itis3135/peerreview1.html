@@ -12,7 +12,12 @@
 </head>
 <body>
     <header>
-        <div data-include="components/header.html"></div>
+        <h1>Grishma Howale's Gentle Hawk || ITIS 3135</h1>
+        <nav id="menu-main"></nav>
+        <nav id="menu-submenu"></nav>
+        <p>
+            <span id="slogan">"Elegance in Every Feather"</span>
+        </p>
     </header>
     
     <main>
@@ -46,13 +51,14 @@
             <p>Continue: The CRAP principles are followed very well keep doing that!</p>
         </section>
     </main>
-    <footer>
-        <div data-include="components/footer.html"></div>
+    <footer id="footer-container">
+        <p>Please click on the links to navigate through my site</p>
+        <nav id="menu-footer"></nav>
     </footer>
     <script>
         document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
      </script>
-     <script src="scripts/HTMLInclude.min.js"></script> 
+     <script src="scripts/menu.js"></script> 
 </body>
 </html>

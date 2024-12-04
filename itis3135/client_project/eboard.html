@@ -95,15 +95,7 @@
 </head>
 <body>
     <header>
-        <h1 class="responsive-heading">South Asian Student Association</h1>
-        <nav>
-            <a href="index.html" id="home-link">Home</a> |
-            <a href="eboard.html" id="eboard">E-Board</a> |
-            <a href="events.html" id="events-link">Events</a> |
-            <a href="culture.html" id="culture-link">Culture and Heritage</a> |
-            <a href="membership.html" id="membership-link">Membership</a> |
-            <a href="contact.html" id="contact-link">Contact</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
     
     <main>
@@ -183,57 +175,9 @@
     </main>
     
     <footer>
-        <p>
-            Pages built by 
-            <a href="ghboutique.com.html">Gh Boutique</a> &copy; 2024
-            <img src="images/button_validation_wcag (1).png" alt="WCAG Validation Image">
-            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="validation button image">
-            <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="validation button image">
-        </p>
+        <div data-include="components/footer.html"></div>
     </footer>
-    
-    <script>
-       // JavaScript for slideshow functionality
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slides");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle("active-slide", i === index);
-    });
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("dot-active", i === index);  // Changed to use .dot-active
-    });
-}
-
-function plusSlides(direction) {
-    currentIndex = (currentIndex + direction + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-function currentSlide(index) {
-    currentIndex = index - 1;
-    showSlide(currentIndex);
-}
-
-// Attach event listeners to navigation buttons and dots
-document.getElementById("prev-btn").addEventListener("click", () => plusSlides(-1));
-document.getElementById("next-btn").addEventListener("click", () => plusSlides(1));
-
-dots.forEach((dot) => {  // Added parentheses around the arrow function argument
-    dot.addEventListener("click", (e) => {
-        const slideIndex = parseInt(e.target.getAttribute("data-slide")) - 1;
-        currentSlide(slideIndex);
-    });
-});
-
-
-
-
-
-        // Auto-play functionality
-        setInterval(() => plusSlides(1), 5000); // Auto-slide every 5 seconds
-    </script>
+    <script src="scripts/HTMLInclude.min.js"></script> 
+    <script src="scripts/slideshow.js"></script> 
 </body>
 </html>
