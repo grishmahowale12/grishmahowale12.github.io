@@ -1,5 +1,3 @@
-// Define the functions first
-
 // Function to add a course text field dynamically
 function addCourseField() {
     var coursesList = document.getElementById("courses-list");
@@ -32,8 +30,6 @@ function validateForm() {
     return true;
 }
 
-
-
 function submitForm(event) {
     event.preventDefault(); // Prevent form from reloading the page
 
@@ -63,36 +59,40 @@ function submitForm(event) {
 
     // Dynamically populate the content with all form values
     introContent.innerHTML = `
+    
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Mascot:</strong> ${mascot}</p>
-        ${imageURL ? `<p><strong>Image:</strong><br><img src="${imageURL}" alt="Uploaded Image"></p>` : ""}
-        <p><strong>Image Caption:</strong> ${imageCaption}</p>
+        ${imageURL ? `
+            <div style="text-align: center;">
+                <img src="${imageURL}" alt="Uploaded Image" style="width: 250px; height: auto;">
+                <br>
+                <span style="display: block; font-style: italic; margin-top: 5px;">${imageCaption}</span>
+            </div>
+        ` : ""}
         <p><strong>Personal Background:</strong> ${personalBackground}</p>
         <p><strong>Professional Background:</strong> ${professionalBackground}</p>
         <p><strong>Academic Background:</strong> ${academicBackground}</p>
         <p><strong>Background in Web Development:</strong> ${webDevelopment}</p>
         <p><strong>Primary Computer Platform:</strong> ${platform}</p>
-        <p><strong>Funny Thing:</strong> ${funnyThing}</p>
-        <p><strong>Anything Else?</strong> ${other}</p>
-        <p><strong>Courses Currently Taking:</strong></p>
+         <p><strong>Courses Currently Taking:</strong></p>
         <ul>
             ${courses.map((course) => `<li>${course}</li>`).join("")}
         </ul>
+        <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+        <p><strong>Anything Else?</strong> ${other}</p>
+       
     `;
 
     // Remove the 'hidden' class to display the result
     resultDiv.classList.remove("hidden");
 }
 
-
-
 // Attach submitForm function to the form submit event
 document.getElementById("intro-form").addEventListener("submit", submitForm);
 
-
 // Function to load and display the image when it's selected
 function loadImage() {
-    var image = document.getElementById('Intro-image').files[0]; // Get the file from input
+    var image = document.getElementById('intro-image').files[0]; // Get the file from input
 
     if (image) {  // Check if a file was selected
         const imageURL = URL.createObjectURL(image);  // Create a URL for the file
@@ -100,7 +100,11 @@ function loadImage() {
         // Create an image element and set its src attribute
         var imgElement = document.createElement('img');
         imgElement.src = imageURL;
-
+        
+        // Apply styles directly to the image to make it smaller
+        imgElement.style.width = "250px";  // Make the image 150px wide
+        imgElement.style.height = "auto";  // Maintain aspect ratio
+        
         // Clear previous content and append the new image
         var imageContainer = document.getElementById('load-image');
         imageContainer.innerHTML = ''; // Clear previous image
@@ -113,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const addCourseButton = document.getElementById("add-course");
     const coursesList = document.getElementById("courses-list");
 
-    
     function addCourseField() {
         const coursesList = document.getElementById("courses-list");
         
@@ -127,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
         courseInput.name = "courses[]";
         courseInput.placeholder = "Enter Course Name";
 
-    
         // Create a delete button for the course
         const deleteBtn = document.createElement("button");
         deleteBtn.type = "button";
@@ -148,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     document.getElementById("add-course-btn").addEventListener("click", addCourseField);
-
 
     document.getElementById('intro-form').addEventListener('reset', function () {
         const resultSection = document.getElementById('result');
